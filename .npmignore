@@ -1,8 +1,2 @@
-coverage
-.eslintrc.js
-.github/**/*
-.prettierignore
-.prettierrc.json
-babel.config.js
-tsconfig*.json
-src
+.gitignore
+package-lock.json
