@@ -20,6 +20,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Upgrade npm to latest
+      run: npm install -g npm@latest
     - name: Install modules
       run: npm ci
     - name: Run ESLint
