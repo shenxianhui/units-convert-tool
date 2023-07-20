@@ -1,33 +1,38 @@
-unit-convert
+units-convert
 =============
 
-[![Downloads](https://img.shields.io/npm/dm/unit-convert.svg)](https://www.npmjs.com/package/unit-convert)
+[![Downloads](https://img.shields.io/npm/dm/units-convert.svg)](https://www.npmjs.com/package/units-convert)
+
+> Tip: This tool is modified on the basis of [convert-units](https://www.npmjs.com/package/convert-units), and the following functions are added:
+> - Solve the problem of floating-point precision after unit conversion
+> - More types of units
 
 A handy utility for converting between quantities in different units.
+
 
 Installation
 -----
 
 ```bash
-npm install unit-convert --save
+npm install units-convert --save
 ```
 
 ```bash
 # beta builds are also available with
-npm install unit-convert@beta --save
+npm install units-convert@beta --save
 ```
 
 Usage
 -----
 
-`unit-convert` has a simple chained API that is easy to read. It can also be configured with the measures that are packaged with it or custom measures.
+`units-convert` has a simple chained API that is easy to read. It can also be configured with the measures that are packaged with it or custom measures.
 
 The code snippet below shows everything needed to get going:
 
 ```js
 // `allMeasures` includes all the measures packaged with this library
-import configureMeasurements from 'unit-convert';
-import allMeasures from 'unit-convert/definitions/all';
+import configureMeasurements from 'units-convert';
+import allMeasures from 'units-convert/definitions/all';
 
 const convert = configureMeasurements(allMeasures);
 ```
@@ -35,8 +40,8 @@ const convert = configureMeasurements(allMeasures);
 It's also possible to limit the measures configured. This allows for smaller packages when using a bundler like `webpack` or `rollup`:
 
 ```js
-import configureMeasurements from 'unit-convert';
-import volume from 'unit-convert/definitions/volume';
+import configureMeasurements from 'units-convert';
+import volume from 'units-convert/definitions/volume';
 
 /*
   `configureMeasurements` is a closure that accepts a directory
@@ -728,13 +733,13 @@ Since measure definitions are plain JS objects, additional units can be added, r
 ```ts
 import configureMeasurements, {
   Measure
-} from 'unit-convert';
+} from 'units-convert';
 
 import
   length, {
   LengthSystems,
   LengthUnits,
-} from "unit-convert/definitions/length"
+} from "units-convert/definitions/length"
 
 type NewLengthUnits = LengthUnits | 'px';
 const DPI = 96;
@@ -775,7 +780,7 @@ This only applies if moving from `<=2.3.4` to `>=3.x`.
 
 `index.js`
 ```js
-import convert from 'unit-convert';
+import convert from 'units-convert';
 
 convert(1).from('m').to('mm');
 convert(1).from('m').to('ft');
@@ -793,8 +798,8 @@ convert(1).from('m').to('ft');
 
 `convert.js`
 ```js
-import configureMeasurements from 'unit-convert';
-import allMeasures from 'unit-convert/definitions/all';
+import configureMeasurements from 'units-convert';
+import allMeasures from 'units-convert/definitions/all';
 
 export default configureMeasurements(allMeasures);
 ```
@@ -805,17 +810,17 @@ Typescript
 The library provides types for all packaged mesasures:
 
 ```ts
-import configureMeasurements from 'unit-convert';
+import configureMeasurements from 'units-convert';
 
 import length, {
   LengthSystems,
   LengthUnits,
-} from "unit-convert/definitions/length"
+} from "units-convert/definitions/length"
 
 import area, {
   AreaSystems,
   AreaUnits,
-} from "unit-convert/definitions/area"
+} from "units-convert/definitions/area"
 
 // Measures: The names of the measures being used
 type Measures = 'length' | 'area';
@@ -836,17 +841,17 @@ convert(4).from('m').to('cm');
 This also allows for IDE tools to highlight issues before running the application:
 
 ```ts
-import configureMeasurements from 'unit-convert';
+import configureMeasurements from 'units-convert';
 
 import length, {
   LengthSystems,
   LengthUnits,
-} from "unit-convert/definitions/length"
+} from "units-convert/definitions/length"
 
 import area, {
   AreaSystems,
   AreaUnits,
-} from "unit-convert/definitions/area"
+} from "units-convert/definitions/area"
 
 // Measures: The names of the measures being used
 type Measures = 'length' | 'area';
@@ -867,13 +872,13 @@ convert(4).from('wat').to('cm');
 Types for the `allMeasures` object are also provided:
 
 ```js
-import configureMeasurements from 'unit-convert';
+import configureMeasurements from 'units-convert';
 
 import allMeasures, {
   AllMeasures,
   AllMeasuresSystems,
   AllMeasuresUnits,
-} from 'unit-convert/definitions/all';
+} from 'units-convert/definitions/all';
 
 const convertAll = configureMeasurements<
   AllMeasures,
@@ -888,7 +893,7 @@ convertAll(4).from('m2').to('cm2');
 Request Measures & Units
 -----------------------
 
-All new measures and additional units are welcome! Take a look at [`src/definitions`](https://github.com/unit-convert/unit-convert/tree/main/src/definitions) to see some examples.
+All new measures and additional units are welcome! Take a look at [`src/definitions`](https://github.com/units-convert/units-convert/tree/main/src/definitions) to see some examples.
 
 Packaged Units
 --------------

@@ -1,11 +1,11 @@
-# Contributing to `unit-convert`
+# Contributing to `units-convert`
 
 Thanks for taking the time and effort to contribute!
 
 ## Getting started
 
-    git clone https://github.com/unit-convert/unit-convert
-    cd unit-convert
+    git clone https://github.com/units-convert/units-convert
+    cd units-convert
     npm ci  # avoid using npm install
 
 That's it! The project does not have a development server or anything like that.
@@ -18,7 +18,7 @@ Whether it's for a bug, suggestion, feature request, please provide as much deta
 
 Please provide the following information in the body of the issue:
 
-- Version of `unit-convert` being used
+- Version of `units-convert` being used
 - Code examples showing the issue
     - Using [codesandbox.io](https://codesandbox.io) is preferred
 - Any other relevant information
