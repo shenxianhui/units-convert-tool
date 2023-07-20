@@ -1,3 +1,5 @@
+import Decimal from 'decimal.js'
+
 var convert,
   keys = require('lodash.keys'),
   each = require('lodash.foreach'),
@@ -116,7 +118,12 @@ Converter.prototype.to = function (to) {
   /**
    * Convert to another unit inside the destination system
    */
-  return result / this.destination.unit.to_anchor
+  // return result / this.destination.unit.to_anchor
+
+  const x = new Decimal(result)
+  const y = new Decimal(this.destination.unit.to_anchor)
+
+  return x.dividedBy(y)
 }
 
 /**
@@ -301,4 +308,4 @@ convert = function (value) {
   return new Converter(value)
 }
 
-module.exports = convert
+export default convert
