@@ -1,24 +1,23 @@
-var metric,
-imperial;
+var metric, imperial;
 
 metric = {
-  'lx': {
+  lx: {
     name: {
-      singular: 'Lux',
-      plural: 'Lux'
+      singular: "Lux",
+      plural: "Lux",
     },
-    to_anchor: 1
-  }
+    to_anchor: 1,
+  },
 };
 
 imperial = {
-  'ft-cd': {
+  "ft-cd": {
     name: {
-      singular: 'Foot-candle',
-      plural: 'Foot-candles'
+      singular: "Foot-candle",
+      plural: "Foot-candles",
     },
-    to_anchor: 1
-  }
+    to_anchor: 1,
+  },
 };
 
 module.exports = {
@@ -26,12 +25,12 @@ module.exports = {
   imperial: imperial,
   _anchors: {
     metric: {
-      unit: 'lx',
-      ratio: 1/10.76391
+      unit: "lx",
+      ratio: 1 / 10.76391,
     },
     imperial: {
-      unit: 'ft-cd',      
-	  ratio: 10.76391
-    }
-  }
+      unit: "ft-cd",
+      ratio: 10.76391,
+    },
+  },
 };
