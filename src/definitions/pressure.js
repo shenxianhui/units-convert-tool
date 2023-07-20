@@ -43,6 +43,20 @@ metric = {
     },
     to_anchor: 101325 / 760000,
   },
+  mH2O: {
+    name: {
+      singular: 'meter of water @ 4°C',
+      plural: 'meters of water @ 4°C',
+    },
+    to_anchor: 9.80665,
+  },
+  mmHg: {
+    name: {
+      singular: 'millimeter of mercury',
+      plural: 'millimeters of mercury',
+    },
+    to_anchor: 0.133322,
+  },
 }
 
 imperial = {
@@ -59,6 +73,13 @@ imperial = {
       plural: 'kilopound per square inch',
     },
     to_anchor: 1,
+  },
+  inHg: {
+    name: {
+      singular: 'Inch of mercury',
+      plural: 'Inches of mercury',
+    },
+    to_anchor: 0.000491154,
   },
 }
 

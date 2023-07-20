@@ -1,19 +1,33 @@
 var metric, imperial
 
 metric = {
+  nm: {
+    name: {
+      singular: 'Nanometer',
+      plural: 'Nanometers',
+    },
+    to_anchor: 1e-9,
+  },
+  μm: {
+    name: {
+      singular: 'Micrometer',
+      plural: 'Micrometers',
+    },
+    to_anchor: 1e-6,
+  },
   mm: {
     name: {
       singular: 'Millimeter',
       plural: 'Millimeters',
     },
-    to_anchor: 1 / 1000,
+    to_anchor: 1e-3,
   },
   cm: {
     name: {
       singular: 'Centimeter',
       plural: 'Centimeters',
     },
-    to_anchor: 1 / 100,
+    to_anchor: 1e-2,
   },
   m: {
     name: {
@@ -27,11 +41,18 @@ metric = {
       singular: 'Kilometer',
       plural: 'Kilometers',
     },
-    to_anchor: 1000,
+    to_anchor: 1e3,
   },
 }
 
 imperial = {
+  mil: {
+    name: {
+      singular: 'Mil',
+      plural: 'Mils',
+    },
+    to_anchor: 1 / 12000,
+  },
   in: {
     name: {
       singular: 'Inch',
@@ -60,12 +81,26 @@ imperial = {
     },
     to_anchor: 1,
   },
+  fathom: {
+    name: {
+      singular: 'Fathom',
+      plural: 'Fathoms',
+    },
+    to_anchor: 6,
+  },
   mi: {
     name: {
       singular: 'Mile',
       plural: 'Miles',
     },
     to_anchor: 5280,
+  },
+  nMi: {
+    name: {
+      singular: 'Nautical Mile',
+      plural: 'Nautical Miles',
+    },
+    to_anchor: 6076.12,
   },
 }
 

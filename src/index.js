@@ -27,6 +27,10 @@ var convert,
     illuminance: require('./definitions/illuminance'),
     frequency: require('./definitions/frequency'),
     angle: require('./definitions/angle'),
+    charge: require('./definitions/charge'),
+    force: require('./definitions/force'),
+    massFlowRate: require('./definitions/massFlowRate'),
+    pieces: require('./definitions/pieces'),
   },
   Converter
 

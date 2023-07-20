@@ -50,6 +50,20 @@ metric = {
     },
     to_anchor: 1000,
   },
+  Ml: {
+    name: {
+      singular: 'Megalitre',
+      plural: 'Megalitres',
+    },
+    to_anchor: 1e6,
+  },
+  Gl: {
+    name: {
+      singular: 'Gigalitre',
+      plural: 'Gigalitres',
+    },
+    to_anchor: 1e9,
+  },
   m3: {
     name: {
       singular: 'Cubic meter',
@@ -68,8 +82,8 @@ metric = {
   // Swedish units
   krm: {
     name: {
-      singular: 'Matsked',
-      plural: 'Matskedar',
+      singular: 'Kryddmått',
+      plural: 'Kryddmått',
     },
     to_anchor: 1 / 1000,
   },

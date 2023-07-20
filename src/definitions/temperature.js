@@ -11,8 +11,8 @@ metric = {
   },
   K: {
     name: {
-      singular: 'degree Kelvin',
-      plural: 'degrees Kelvin',
+      singular: 'Kelvin',
+      plural: 'Kelvins',
     },
     to_anchor: 1,
     anchor_shift: 273.15,

@@ -1,6 +1,20 @@
 var energy
 
 energy = {
+  Ws: {
+    name: {
+      singular: 'Watt-second',
+      plural: 'Watt-seconds',
+    },
+    to_anchor: 1,
+  },
+  Wm: {
+    name: {
+      singular: 'Watt-minute',
+      plural: 'Watt-minutes',
+    },
+    to_anchor: 60,
+  },
   Wh: {
     name: {
       singular: 'Watt-hour',
@@ -49,6 +63,20 @@ energy = {
       plural: 'Kilojoules',
     },
     to_anchor: 1000,
+  },
+  MJ: {
+    name: {
+      singular: 'Megajoule',
+      plural: 'Megajoules',
+    },
+    to_anchor: 1e6,
+  },
+  GJ: {
+    name: {
+      singular: 'Gigajoule',
+      plural: 'Gigajoules',
+    },
+    to_anchor: 1e9,
   },
 }
 

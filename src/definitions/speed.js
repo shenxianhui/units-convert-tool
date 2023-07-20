@@ -15,10 +15,17 @@ metric = {
     },
     to_anchor: 1,
   },
+  'mm/h': {
+    name: {
+      singular: 'Millimeter per hour',
+      plural: 'Millimeters per hour',
+    },
+    to_anchor: 0.000001,
+  },
 }
 
 imperial = {
-  'm/h': {
+  mph: {
     name: {
       singular: 'Mile per hour',
       plural: 'Miles per hour',
@@ -38,6 +45,20 @@ imperial = {
       plural: 'Feet per second',
     },
     to_anchor: 0.681818,
+  },
+  'ft/min': {
+    name: {
+      singular: 'Foot per minute',
+      plural: 'Feet per minute',
+    },
+    to_anchor: 0.0113636,
+  },
+  'in/h': {
+    name: {
+      singular: 'Inch per hour',
+      plural: 'Inches per hour',
+    },
+    to_anchor: 0.00001578,
   },
 }
 
