@@ -4,7 +4,6 @@ units-convert
 > This tool is modified from [convert-units](https://www.npmjs.com/package/convert-units), adding the following functions:
 > - Solve the problem of floating-point precision after unit conversion
 > - More types of units
-> - Add Chinese description to API
 > - Add [中文文档](https://github.com/shenxianhui/units-convert/blob/master/README_CN.md)
 
 A handy utility for converting between quantities in different units.
@@ -136,345 +135,345 @@ convert().list('mass')
 Supported Units
 --------------
 <details>
-<summary>Length 长度</summary>
+<summary>Length</summary>
 
-- `nm`：纳米 (nanometer)
-- `μm`：微米 (micrometer)
-- `mm`：毫米 (millimeter)
-- `cm`：厘米 (centimeter)
-- `m`：米 (meter)
-- `km`：千米 (kilometer)
-- `in`：英寸 (inch)
-- `yd`：码 (yard)
-- `ft-us`：美国英尺 (U.S. survey foot)
-- `ft`：英尺 (foot)
-- `fathom`：英寻 (fathom)
-- `mi`：英里 (mile)
-- `nMi`：海里 (nautical mile)
+- `nm`: nanometer
+- `μm`: micrometer
+- `mm`: millimeter
+- `cm`: centimeter
+- `m`: meter
+- `km`: kilometer
+- `in`: inch
+- `yd`: yard
+- `ft-us`: U.S. survey foot
+- `ft`: foot
+- `fathom`: fathom
+- `mi`: mile
+- `nMi`: nautical mile
 </details>
 
 <details>
-<summary>Area 面积</summary>
+<summary>Area</summary>
 
-- `mm2`：平方毫米 (square millimeter)
-- `cm2`：平方厘米 (square centimeter)
-- `m2`：平方米 (square meter)
-- `ha`：公顷 (hectare)
-- `km2`：平方千米 (square kilometer)
-- `in2`：平方英寸 (square inch)
-- `ft2`：平方英尺 (square foot)
-- `ac`：英亩 (acre)
-- `mi2`：平方英里 (square mile)
+- `mm2`: square millimeter
+- `cm2`: square centimeter
+- `m2`: square meter
+- `ha`: hectare
+- `km2`: square kilometer
+- `in2`: square inch
+- `ft2`: square foot
+- `ac`: acre
+- `mi2`: square mile
 </details>
 
 <details>
-<summary>Mass 质量</summary>
+<summary>Mass</summary>
 
-- `mcg`：微克 (microgram)
-- `mg`：毫克 (milligram)
-- `g`：克 (gram)
-- `kg`：千克 (kilogram)
-- `oz`：盎司 (ounce)
-- `lb`：磅 (pound)
-- `mt`：公吨 (metric ton)
-- `t`：吨 (ton)
+- `mcg`: microgram
+- `mg`: milligram
+- `g`: gram
+- `kg`: kilogram
+- `oz`: ounce
+- `lb`: pound
+- `mt`: metric ton
+- `t`: ton
 </details>
 
 <details>
-<summary>Volume 体积/容量</summary>
+<summary>Volume</summary>
 
-- `mm3`：立方毫米 (cubic millimeter)
-- `cm3`：立方厘米 (cubic centimeter)
-- `ml`：毫升 (milliliter)
-- `l`：升 (liter)
-- `kl`：千升 (kiloliter)
-- `Ml`：兆升 (megaliter)
-- `Gl`：吉升 (gigaliter)
-- `m3`：立方米 (cubic meter)
-- `km3`：立方千米 (cubic kilometer)
-- `tsp`：茶匙 (teaspoon)
-- `Tbs`：汤匙 (tablespoon)
-- `in3`：立方英寸 (cubic inch)
-- `fl-oz`：液体盎司 (fluid ounce)
-- `cup`：杯 (cup)
-- `pnt`：品脱 (pint)
-- `qt`：夸脱 (quart)
-- `gal`：加仑 (gallon)
-- `ft3`：立方英尺 (cubic foot)
-- `yd3`：立方码 (cubic yard)
+- `mm3`: cubic millimeter
+- `cm3`: cubic centimeter
+- `ml`: milliliter
+- `l`: liter
+- `kl`: kiloliter
+- `Ml`: megaliter
+- `Gl`: gigaliter
+- `m3`: cubic meter
+- `km3`: cubic kilometer
+- `tsp`: teaspoon
+- `Tbs`: tablespoon
+- `in3`: cubic inch
+- `fl-oz`: fluid ounce
+- `cup`: cup
+- `pnt`: pint
+- `qt`: quart
+- `gal`: gallon
+- `ft3`: cubic foot
+- `yd3`: cubic yard
 </details>
 
 <details>
-<summary>Volume Flow Rate 容量流量</summary>
+<summary>Volume Flow Rate</summary>
 
-- `mm3/s`：每秒立方毫米 (cubic millimeter per second)
-- `cm3/s`：每秒立方厘米 (cubic centimeter per second)
-- `ml/s`：每秒毫升 (milliliter per second)
-- `cl/s`：每秒厘升 (centiliter per second)
-- `dl/s`：每秒分升 (deciliter per second)
-- `l/s`：每秒升 (liter per second)
-- `l/min`：每分钟升 (liter per minute)
-- `l/h`：每小时升 (liter per hour)
-- `kl/s`：每秒千升 (kiloliter per second)
-- `kl/min`：每分钟千升 (kiloliter per minute)
-- `kl/h`：每小时千升 (kiloliter per hour)
-- `m3/s`：每秒立方米 (cubic meter per second)
-- `m3/min`：每分钟立方米 (cubic meter per minute)
-- `m3/h`：每小时立方米 (cubic meter per hour)
-- `km3/s`：每秒立方千米 (cubic kilometer per second)
-- `tsp/s`：每秒茶匙 (teaspoon per second)
-- `Tbs/s`：每秒汤匙 (tablespoon per second)
-- `in3/s`：每秒立方英寸 (cubic inch per second)
-- `in3/min`：每分钟立方英寸 (cubic inch per minute)
-- `in3/h`：每小时立方英寸 (cubic inch per hour)
-- `fl-oz/s`：每秒液体盎司 (fluid ounce per second)
-- `fl-oz/min`：每分钟液体盎司 (fluid ounce per minute)
-- `fl-oz/h`：每小时液体盎司 (fluid ounce per hour)
-- `cup/s`：每秒杯 (cup per second)
-- `pnt/s`：每秒品脱 (pint per second)
-- `pnt/min`：每分钟品脱 (pint per minute)
-- `pnt/h`：每小时品脱 (pint per hour)
-- `qt/s`：每秒夸脱 (quart per second)
-- `gal/s`：每秒加仑 (gallon per second)
-- `gal/min`：每分钟加仑 (gallon per minute)
-- `gal/h`：每小时加仑 (gallon per hour)
-- `ft3/s`：每秒立方英尺 (cubic foot per second)
-- `ft3/min`：每分钟立方英尺 (cubic foot per minute)
-- `ft3/h`：每小时立方英尺 (cubic foot per hour)
-- `yd3/s`：每秒立方码 (cubic yard per second)
-- `yd3/min`：每分钟立方码 (cubic yard per minute)
-- `yd3/h`：每小时立方码 (cubic yard per hour)
+- `mm3/s`: cubic millimeter per second
+- `cm3/s`: cubic centimeter per second
+- `ml/s`: milliliter per second
+- `cl/s`: centiliter per second
+- `dl/s`: deciliter per second
+- `l/s`: liter per second
+- `l/min`: liter per minute
+- `l/h`: liter per hour
+- `kl/s`: kiloliter per second
+- `kl/min`: kiloliter per minute
+- `kl/h`: kiloliter per hour
+- `m3/s`: cubic meter per second
+- `m3/min`: cubic meter per minute
+- `m3/h`: cubic meter per hour
+- `km3/s`: cubic kilometer per second
+- `tsp/s`: teaspoon per second
+- `Tbs/s`: tablespoon per second
+- `in3/s`: cubic inch per second
+- `in3/min`: cubic inch per minute
+- `in3/h`: cubic inch per hour
+- `fl-oz/s`: fluid ounce per second
+- `fl-oz/min`: fluid ounce per minute
+- `fl-oz/h`: fluid ounce per hour
+- `cup/s`: cup per second
+- `pnt/s`: pint per second
+- `pnt/min`: pint per minute
+- `pnt/h`: pint per hour
+- `qt/s`: quart per second
+- `gal/s`: gallon per second
+- `gal/min`: gallon per minute
+- `gal/h`: gallon per hour
+- `ft3/s`: cubic foot per second
+- `ft3/min`: cubic foot per minute
+- `ft3/h`: cubic foot per hour
+- `yd3/s`: cubic yard per second
+- `yd3/min`: cubic yard per minute
+- `yd3/h`: cubic yard per hour
 </details>
 
 <details>
-<summary>Temperature 温度</summary>
+<summary>Temperature</summary>
 
-- `C`：摄氏度 (Celsius)
-- `F`：华氏度 (Fahrenheit)
-- `K`：开尔文 (Kelvin)
-- `R`：兰氏度 (Rankine)
+- `C`: Celsius
+- `F`: Fahrenheit
+- `K`: Kelvin
+- `R`: Rankine
 </details>
 
 <details>
-<summary>Time 时间</summary>
+<summary>Time</summary>
 
-- `ns`：纳秒 (nanosecond)
-- `μs`：微秒 (microsecond)
-- `ms`：毫秒 (millisecond)
-- `s`：秒 (second)
-- `min`：分钟 (minute)
-- `h`：小时 (hour)
-- `d`：天 (day)
-- `week`：周 (week)
-- `month`：月 (month)
-- `year`：年 (year)
+- `ns`: nanosecond
+- `μs`: microsecond
+- `ms`: millisecond
+- `s`: second
+- `min`: minute
+- `h`: hour
+- `d`: day
+- `week`: week
+- `month`: month
+- `year`: year
 </details>
 
 <details>
-<summary>Frequency 频率/角速度</summary>
+<summary>Frequency</summary>
 
-- `Hz`：赫兹 (hertz)
-- `mHz`：毫赫兹 (millihertz)
-- `kHz`：千赫兹 (kilohertz)
-- `MHz`：兆赫兹 (megahertz)
-- `GHz`：千兆赫兹 (gigahertz)
-- `THz`：太赫兹 (terahertz)
-- `rpm`：每分钟转数 (revolutions per minute)
-- `deg/s`：每秒角度 (degrees per second)
-- `rad/s`：每秒弧度 (radians per second)
+- `Hz`: hertz
+- `mHz`: millihertz
+- `kHz`: kilohertz
+- `MHz`: megahertz
+- `GHz`: gigahertz
+- `THz`: terahertz
+- `rpm`: revolutions per minute
+- `deg/s`: degrees per second
+- `rad/s`: radians per second
 </details>
 
 <details>
-<summary>Speed 速度</summary>
+<summary>Speed</summary>
 
-- `m/s`：米每秒 (meters per second)
-- `km/h`：千米每小时 (kilometers per hour)
-- `mph`：英里每小时 (miles per hour)
-- `knot`：海里每小时 (knots)
-- `ft/s`：英尺每秒 (feet per second)
-- `in/h`：英寸每小时 (inches per hour)
-- `mm/h`：毫米每小时 (millimeters per hour)
+- `m/s`: meters per second
+- `km/h`: kilometers per hour
+- `mph`: miles per hour
+- `knot`: knots
+- `ft/s`: feet per second
+- `in/h`: inches per hour
+- `mm/h`: millimeters per hour
 </details>
 
 <details>
-<summary>Pace 速度倒数</summary>
+<summary>Pace</summary>
 
-- `s/m`：每米秒 (seconds per meter)
-- `min/km`：每千米分钟 (minutes per kilometer)
-- `s/ft`：每英尺秒 (seconds per foot)
-- `min/mi`：每英里分钟 (minutes per mile)
+- `s/m`: seconds per meter
+- `min/km`: minutes per kilometer
+- `s/ft`: seconds per foot
+- `min/mi`: minutes per mile
 </details>
 
 <details>
-<summary>Pressure 压力</summary>
+<summary>Pressure</summary>
 
-- `Pa`：帕斯卡 (Pascal)
-- `hPa`：百帕斯卡 (hectopascal)
-- `kPa`：千帕斯卡 (kilopascal)
-- `MPa`：兆帕斯卡 (megapascal)
-- `bar`：巴 (bar)
-- `torr`：托 (torr)
-- `mH2O`：米水柱 (meter of water column)
-- `mmHg`：毫米汞柱 (millimeters of mercury)
-- `psi`：磅力/平方英寸 (pound per square inch)
-- `ksi`：千磅力/平方英寸 (kilo pound per square inch)
+- `Pa`: Pascal
+- `hPa`: hectopascal
+- `kPa`: kilopascal
+- `MPa`: megapascal
+- `bar`: bar
+- `torr`: torr
+- `mH2O`: meter of water column
+- `mmHg`: millimeters of mercury
+- `psi`: pound per square inch
+- `ksi`: kilo pound per square inch
 </details>
 
 <details>
-<summary>Digital 数据</summary>
+<summary>Digital</summary>
 
-- `b`：比特 (bit)
-- `Kb`：千比特 (kilobit)
-- `Mb`：兆比特 (megabit)
-- `Gb`：千兆比特 (gigabit)
-- `Tb`：太比特 (terabit)
-- `B`：字节 (byte)
-- `KB`：千字节 (kilobyte)
-- `MB`：兆字节 (megabyte)
-- `GB`：千兆字节 (gigabyte)
-- `TB`：太字节 (terabyte)
+- `b`: bit
+- `Kb`: kilobit
+- `Mb`: megabit
+- `Gb`: gigabit
+- `Tb`: terabit
+- `B`: byte
+- `KB`: kilobyte
+- `MB`: megabyte
+- `GB`: gigabyte
+- `TB`: terabyte
 </details>
 
 <details>
-<summary>Illuminance 照度</summary>
+<summary>Illuminance</summary>
 
-- `lx`：勒克斯 (lux)
-- `ft-cd`：英尺烛光 (foot-candle)
+- `lx`: lux
+- `ft-cd`: foot-candle
 </details>
 
 <details>
-<summary>Parts-Per 浓度/含量</summary>
+<summary>Parts-Per</summary>
 
-- `ppm`：百万分之一 (parts per million)
-- `ppb`：十亿分之一 (parts per billion)
-- `ppt`：万亿分之一 (parts per trillion)
-- `ppq`：千万亿分之一 (parts per quadrillion)
+- `ppm`: parts per million
+- `ppb`: parts per billion
+- `ppt`: parts per trillion
+- `ppq`: parts per quadrillion
 </details>
 
 <details>
-<summary>Voltage 电压</summary>
+<summary>Voltage</summary>
 
-- `V`：伏特 (Volt)
-- `mV`：毫伏特 (millivolt)
-- `kV`：千伏特 (kilovolt)
+- `V`: Volt
+- `mV`: millivolt
+- `kV`: kilovolt
 </details>
 
 <details>
-<summary>Current 电流</summary>
+<summary>Current</summary>
 
-- `A`：安培 (Ampere)
-- `mA`：毫安培 (milliampere)
-- `kA`：千安培 (kiloampere)
+- `A`: Ampere
+- `mA`: milliampere
+- `kA`: kiloampere
 </details>
 
 <details>
-<summary>Power 功率</summary>
+<summary>Power</summary>
 
-- `W`：瓦特 (Watt)
-- `mW`：毫瓦特 (milliwatt)
-- `kW`：千瓦特 (kilowatt)
-- `MW`：兆瓦特 (megawatt)
-- `GW`：千兆瓦特 (gigawatt)
-- `PS`：皮卡瓦特 (petawatt)
-- `Btu/s`：英热单位每秒 (British thermal unit per second)
-- `ft-lb/s`：英尺-磅每秒 (foot-pound per second)
-- `hp`：马力 (horsepower)
+- `W`: Watt
+- `mW`: milliwatt
+- `kW`: kilowatt
+- `MW`: megawatt
+- `GW`: gigawatt
+- `PS`: petawatt
+- `Btu/s`: British thermal unit per second
+- `ft-lb/s`: foot-pound per second
+- `hp`: horsepower
 </details>
 
 <details>
-<summary>Apparent Power 视在功率</summary>
+<summary>Apparent Power</summary>
 
-- `VA`：伏安 (volt-ampere)
-- `mVA`：毫伏安 (millivolt-ampere)
-- `kVA`：千伏安 (kilovolt-ampere)
-- `MVA`：兆伏安 (megavolt-ampere)
-- `GVA`：千兆伏安 (gigavolt-ampere)
+- `VA`: volt-ampere
+- `mVA`: millivolt-ampere
+- `kVA`: kilovolt-ampere
+- `MVA`: megavolt-ampere
+- `GVA`: gigavolt-ampere
 </details>
 
 <details>
-<summary>Reactive Power 无功功率</summary>
+<summary>Reactive Power</summary>
 
-- `VAR`：伏安无功 (volt-ampere reactive)
-- `mVAR`：毫伏安无功 (millivolt-ampere reactive)
-- `kVAR`：千伏安无功 (kilovolt-ampere reactive)
-- `MVAR`：兆伏安无功 (megavolt-ampere reactive)
-- `GVAR`：千兆伏安无功 (gigavolt-ampere reactive)
+- `VAR`: volt-ampere reactive
+- `mVAR`: millivolt-ampere reactive
+- `kVAR`: kilovolt-ampere reactive
+- `MVAR`: megavolt-ampere reactive
+- `GVAR`: gigavolt-ampere reactive
 </details>
 
 <details>
-<summary>Energy 能量/功耗</summary>
+<summary>Energy</summary>
 
-- `Ws`：瓦秒 (watt-second)
-- `Wh`：瓦时 (watt-hour)
-- `mWh`：毫瓦时 (milliwatt-hour)
-- `kWh`：千瓦时 (kilowatt-hour)
-- `MWh`：兆瓦时 (megawatt-hour)
-- `GWh`：千兆瓦时 (gigawatt-hour)
-- `J`：焦耳 (joule)
-- `kJ`：千焦耳 (kilojoule)
-- `MJ`：兆焦耳 (megajoule)
-- `GJ`：千兆焦耳 (gigajoule)
+- `Ws`: watt-second
+- `Wh`: watt-hour
+- `mWh`: milliwatt-hour
+- `kWh`: kilowatt-hour
+- `MWh`: megawatt-hour
+- `GWh`: gigawatt-hour
+- `J`: joule
+- `kJ`: kilojoule
+- `MJ`: megajoule
+- `GJ`: gigajoule
 </details>
 
 <details>
-<summary>Reactive Energy 无功功耗</summary>
+<summary>Reactive Energy</summary>
 
-- `VARh`：伏安无功时 (volt-ampere reactive hour)
-- `mVARh`：毫伏安无功时 (millivolt-ampere reactive hour)
-- `kVARh`：千伏安无功时 (kilovolt-ampere reactive hour)
-- `MVARh`：兆伏安无功时 (megavolt-ampere reactive hour)
-- `GVARh`：千兆伏安无功时 (gigavolt-ampere reactive hour)
+- `VARh`: volt-ampere reactive hour
+- `mVARh`: millivolt-ampere reactive hour
+- `kVARh`: kilovolt-ampere reactive hour
+- `MVARh`: megavolt-ampere reactive hour
+- `GVARh`: gigavolt-ampere reactive hour
 </details>
 
 <details>
-<summary>Angle 角度</summary>
+<summary>Angle</summary>
 
-- `deg`：度 (degree)
-- `rad`：弧度 (radian)
-- `grad`：百分度 (gradian)
-- `arcmin`：角分 (arcminute)
-- `arcsec`：角秒 (arcsecond)
+- `deg`: degree
+- `rad`: radian
+- `grad`: gradian
+- `arcmin`: arcminute
+- `arcsec`: arcsecond
 </details>
 
 <details>
-<summary>Charge 电荷</summary>
+<summary>Charge</summary>
 
-- `c`：库仑 (coulomb)
-- `mC`：毫库仑 (milliampere)
-- `μC`：微库仑 (microcoulomb)
-- `nC`：纳库仑 (nanocoulomb)
-- `pC`：皮库仑 (picocoulomb)
+- `c`: coulomb
+- `mC`: milliampere
+- `μC`: microcoulomb
+- `nC`: nanocoulomb
+- `pC`: picocoulomb
 </details>
 
 <details>
-<summary>Force 力</summary>
+<summary>Force</summary>
 
-- `N`：牛顿 (Newton)
-- `kN`：千牛顿 (kilonewton)
-- `lbf`：磅力 (pound-force)
+- `N`: Newton
+- `kN`: kilonewton
+- `lbf`: pound-force
 </details>
 
 <details>
-<summary>Acceleration 加速度</summary>
+<summary>Acceleration</summary>
 
-- `g (g-force)`：重力加速度 (acceleration due to gravity)
-- `m/s2`：标准加速度 (standard acceleration)
+- `g (g-force)`: acceleration due to gravity
+- `m/s2`: standard acceleration
 </details>
 
 <details>
-<summary>Pieces 数量/计量</summary>
+<summary>Pieces</summary>
 
-- `pcs`：pieces（件数），表示物品的数量。
-- `bk-doz`：baker's dozen（烘焙师的一打），表示13个物品，比标准的一打（12个）多一个。
-- `cp`：cents（分），表示货币单位中的百分之一。
-- `doz-doz`：dozen dozen（打打），表示12打，即144个物品。
-- `doz`：dozen（打），表示12个物品。
-- `gr-gr`：gross gross（十二打十二打），表示12打，即144个物品。
-- `gros`：gross（十二打），表示12打，即144个物品。
-- `half-dozen`：half a dozen（半打），表示6个物品。
-- `long-hundred`：long hundred（长百），表示120个物品。
-- `ream`：ream（令），表示一组纸张，通常为500张。
-- `scores`：scores（二十个一组），表示20个物品。
-- `sm-gr`：small gross（小打），表示10打，即120个物品。
-- `trio`：trio（三个一组），表示3个物品。
+- `pcs`: pieces
+- `bk-doz`: baker's dozen
+- `cp`: cents
+- `doz-doz`: dozen dozen
+- `doz`: dozen
+- `gr-gr`: gross gross
+- `gros`: gross
+- `half-dozen`: half a dozen
+- `long-hundred`: long hundred
+- `ream`: ream
+- `scores`: scores
+- `sm-gr`: small gross
+- `trio`: trio
 </details>
