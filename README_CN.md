@@ -35,7 +35,7 @@ convert(1).from('lb').to('kg')
 // 0.4536... (测试为 4 位有效数字)
 ```
 
-请注意不要要求不可能的转换：
+请注意不要使用无效的转换：
 
 ```js
 convert(1).from('oz').to('fl-oz')
@@ -65,7 +65,7 @@ convert().measures()
 // [ 'length', 'mass', 'volume' ]
 ```
 
-如果您想知道单位可能的转换，只需使用 `.possibilities`
+如果您想知道单位的转换，只需使用 `.possibilities`
 
 ```js
 convert().from('l').possibilities()
@@ -75,7 +75,7 @@ convert().from('kg').possibilities()
 // [ 'mcg', 'mg', 'g', 'kg', 'oz', 'lb' ]
 ```
 
-您还可以获得度量的可能转换：
+您还可以获得质量相关的转换：
 
 ```js
 convert().possibilities('mass')
