@@ -1,6 +1,6 @@
 {
   "name": "units-convert",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "description": "Convert between quantities in different units",
   "author": "Shen Xianhui",
   "license": "MIT",

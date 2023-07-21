@@ -86,7 +86,8 @@ Converter.prototype.to = function (to) {
   /**
    * Convert from the source value to its anchor inside the system
    */
-  result = this.val * this.origin.unit.to_anchor
+  // result = this.val * this.origin.unit.to_anchor
+  result = new Decimal(this.val).times(this.origin.unit.to_anchor).toNumber()
 
   /**
    * For some changes it's a simple shift (C to K)
@@ -94,7 +95,8 @@ Converter.prototype.to = function (to) {
    * and subtract it when converting from the unit
    */
   if (this.origin.unit.anchor_shift) {
-    result -= this.origin.unit.anchor_shift
+    // result -= this.origin.unit.anchor_shift
+    result = new Decimal(result).minus(this.origin.unit.anchor_shift).toNumber()
   }
 
   /**
@@ -108,7 +110,10 @@ Converter.prototype.to = function (to) {
     if (typeof transform === 'function') {
       result = transform(result)
     } else {
-      result *= measures[this.origin.measure]._anchors[this.origin.system].ratio
+      // result *= measures[this.origin.measure]._anchors[this.origin.system].ratio
+      result = new Decimal(result)
+        .times(measures[this.origin.measure]._anchors[this.origin.system].ratio)
+        .toNumber()
     }
   }
 
@@ -116,18 +121,15 @@ Converter.prototype.to = function (to) {
    * This shift has to be done after the system conversion business
    */
   if (this.destination.unit.anchor_shift) {
-    result += this.destination.unit.anchor_shift
+    // result += this.destination.unit.anchor_shift
+		result = new Decimal(result).plus(this.destination.unit.anchor_shift).toNumber()
   }
 
   /**
    * Convert to another unit inside the destination system
    */
   // return result / this.destination.unit.to_anchor
-
-  const x = new Decimal(result)
-  const y = new Decimal(this.destination.unit.to_anchor)
-
-  return x.dividedBy(y)
+	return new Decimal(result).div(this.destination.unit.to_anchor).toNumber()
 }
 
 /**
