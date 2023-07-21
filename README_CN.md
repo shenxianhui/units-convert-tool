@@ -75,14 +75,14 @@ convert().from('kg').possibilities()
 // [ 'mcg', 'mg', 'g', 'kg', 'oz', 'lb' ]
 ```
 
-您还可以获得质量相关的转换：
+您还可以获取单元相关的转换：
 
 ```js
 convert().possibilities('mass')
 // [ 'mcg', 'mg', 'g', 'kg', 'oz', 'lb', 'mt', 't' ]
 ```
 
-您还可以获得所有可用的单位：
+您还可以获取所有可用的单位：
 
 ```js
 convert().possibilities()
@@ -119,7 +119,7 @@ convert().list()
 */
 ```
 
-您还可以获得某个质量的所有单位的详细描述：
+您还可以获取某个单元的所有单位的详细描述：
 
 ```js
 convert().list('mass')
