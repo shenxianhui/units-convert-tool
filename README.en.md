@@ -1,9 +1,6 @@
 units-convert
 =============
 
-
-> ***Tip:***
->
 > This tool is modified on the basis of [convert-units](https://www.npmjs.com/package/convert-units), and the following functions are added:
 > - Solve the problem of floating-point precision after unit conversion
 > - More types of units
