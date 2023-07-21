@@ -5,7 +5,7 @@ units-convert
 > - Solve the problem of floating-point precision after unit conversion
 > - More types of units
 > - Add Chinese description to API
-> - 添加[中文文档](https://github.com/shenxianhui/units-convert/blob/master/README_CN.md)
+> - Add [中文文档](https://github.com/shenxianhui/units-convert/blob/master/README_CN.md)
 
 A handy utility for converting between quantities in different units.
 
