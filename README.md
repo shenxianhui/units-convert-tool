@@ -1,25 +1,27 @@
 units-convert
 =============
 
-> 本工具修改自[convert-units](https://www.npmjs.com/package/convert-units)，增加了以下功能：
-> - 解决浮点数精度问题
-> - 更加丰富的单位类型
+> This tool is modified from [convert-units](https://www.npmjs.com/package/convert-units), adding the following functions:
+> - Solve the problem of floating-point precision after unit conversion
+> - More types of units
+> - Add Chinese description to API
+> - 添加[中文文档](https://github.com/shenxianhui/units-convert/blob/master/README_CN.md)
 
-一个方便的实用程序，用于在不同单位的数量之间进行转换。
+A handy utility for converting between quantities in different units.
 
-安装
+Installation
 -----
 
 ```
 npm install units-convert --save
 ```
 
-用法
+Usage
 -----
 
-`units-convert` 有一个简单的链式 API，易于阅读。
+`units-convert` has a simple chained API that is easy to read.
 
-以下是在体积的公制单位之间移动的方法：
+Here's how you move between the metric units for volume:
 
 ```js
 var convert = require('units-convert')
@@ -28,44 +30,43 @@ convert(1).from('l').to('ml')
 // 1000
 ```
 
-以同样的方式从英制单位跳转到公制单位：
+Jump from imperial to metric units the same way:
 
 ```js
 convert(1).from('lb').to('kg')
-// 0.4536... (测试为 4 位有效数字)
+// 0.4536... (tested to 4 significant figures)
 ```
 
-请注意不要要求不可能的转换：
+Just be careful not to ask for an impossible conversion:
 
 ```js
 convert(1).from('oz').to('fl-oz')
-// Error: Cannot convert incompatible measures of volume and mass
+// throws -- you can't go from mass to volume!
 ```
 
-您可以要求 `units-convert` 来选择最适合您的单位。 您还可以选择显式排除数量级或指定用于选择最佳表示的截止数。
-
+You can ask `units-convert` to select the best unit for you. You can also optionally explicitly exclude orders of magnitude or specify a cut off number for selecting the best representation.
 ```js
 convert(12000).from('mm').toBest()
-// 12 Meters (数值大于 1 的最小单位)
+// 12 Meters (the smallest unit with a value above 1)
 
 convert(12000).from('mm').toBest({ exclude: ['m'] })
-// 1200 Centimeters (除米之外的最小单位)
+// 1200 Centimeters (the smallest unit excluding meters)
 
 convert(900).from('mm').toBest({ cutOffNumber: 10 });
-// 900 Centimeters (数值等于或大于 10 的最小单位)
+// 900 Centimeters (the smallest unit with a value equal to or above 10)
 
 convert(1000).from('mm').toBest({ cutOffNumber: 10 })
-// 10 Meters (数值等于或大于 10 的最小单位)
+// 10 Meters (the smallest unit with a value equal to or above 10)
 ```
 
-您可以获取 `.measures` 支持的测量类型列表
+You can get a list of the measurement types supported with `.measures`
 
 ```js
 convert().measures()
 // [ 'length', 'mass', 'volume' ]
 ```
 
-如果您想知道单位可能的转换，只需使用 `.possibilities`
+If you ever want to know the possible conversions for a unit, just use `.possibilities`
 
 ```js
 convert().from('l').possibilities()
@@ -75,21 +76,19 @@ convert().from('kg').possibilities()
 // [ 'mcg', 'mg', 'g', 'kg', 'oz', 'lb' ]
 ```
 
-您还可以获得度量的可能转换：
-
+You can also get the possible conversions for a measure:
 ```js
 convert().possibilities('mass')
 // [ 'mcg', 'mg', 'g', 'kg', 'oz', 'lb', 'mt', 't' ]
 ```
 
-您还可以获得所有可用的单位：
-
+You can also get the all the available units:
 ```js
 convert().possibilities()
 // [ 'mm', 'cm', 'm', 'in', 'ft-us', 'ft', 'mi', 'mcg', 'mg', 'g', 'kg', 'oz', 'lb', 'mt', 't', 'ml', 'l', 'tsp', 'Tbs', 'fl-oz', 'cup', 'pnt', 'qt', 'gal', 'ea', 'dz' ];
 ```
 
-要获取单元的详细描述，请使用 `describe`
+To get a detailed description of a unit, use `describe`
 
 ```js
 convert().describe('kg')
@@ -104,7 +103,7 @@ convert().describe('kg')
 */
 ```
 
-要获取所有单位的详细描述，请使用 `list`
+To get detailed descriptions of all units, use `list`.
 
 ```js
 convert().list()
@@ -119,7 +118,7 @@ convert().list()
 */
 ```
 
-您还可以获得某个度量的所有单位的详细描述：
+You can also get detailed descriptions of all units for a measure:
 
 ```js
 convert().list('mass')
@@ -134,7 +133,7 @@ convert().list('mass')
 */
 ```
 
-支持单位
+Supported Units
 --------------
 <details>
 <summary>Length 长度</summary>
