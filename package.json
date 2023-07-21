@@ -1,13 +1,15 @@
 {
   "name": "units-convert",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Convert between quantities in different units",
   "author": "Shen Xianhui",
   "license": "MIT",
   "main": "src",
   "scripts": {},
   "dependencies": {
-    "decimal.js": "^10.4.3"
+    "decimal.js": "^10.4.3",
+    "lodash.keys": "2.3.x",
+    "lodash.foreach": "2.3.x"
   },
   "devDependencies": {
     "prettier": "^2.8.8"
