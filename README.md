@@ -1,9 +1,6 @@
 units-convert
 =============
 
-
-> ***注:***
->
 > 本工具修改自[convert-units](https://www.npmjs.com/package/convert-units)，增加了以下功能：
 > - 解决浮点数精度问题
 > - 更加丰富的单位类型
